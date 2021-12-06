@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div id="result" hidden>
+        <div class="container">
+            <div class="row">
+                <div class="border col-sm">
+                    <h2>Total Videos</h2>
+                    <h4 id="total"></h4>
+                </div>
+                <div class="border col-sm">
+                    <h2>Uploader</h2>
+                    <h4 id="stat2"></h4>
+                </div>
+                <div class="border col-sm">
+                    <h2>Category</h2>
+                    <h4 id="stat3"></h4>
+                </div>
+            </div>
+        </div>
+        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+        <table id="myTable">
+            <tr>
+                <th>Video ID</th>
+                <th>Page Rank</th>
+                <th>Age</th>
+                <th>Length</th>
+                <th>Views</th>
+                <th>Rate</th>
+                <th>Ratings</th>
+                <th>Comments</th>
+            </tr>
+        </table>
+    </div>
+    <div class="image">
+        <img src="../img/wsu.png"/>
+    </div>
+    <form action="/action_page.php" class="form-group" id="form">
+        <label for="count">Top</label>
+        <input type="text" id="count" name="count">
+        <label for="category">Videos in</label>
+        <select name="category" id="category">
+            <option value="Autos&amp;Vehicles">Autos&amp;Vehicles</option>
+            <option value="Film&amp;Animation">Film&amp;Animation</option>
+            <option value="Gadgets&amp;Games">Gadgets&amp;Games</option>
+            <option value="Howto&amp;DIY">Howto&amp;DIY</option>
+            <option value="News&amp;Politics">News&amp;Politics</option>
+            <option value="People&amp;Blogs">People&amp;Blogs</option>
+            <option value="Pets&amp;Animals">Pets&amp;Animals</option>
+            <option value="Travel&amp;Places">Travel&amp;Places</option>
+        </select>
+        <label for="uploader">From</label>
+        <input type="text" id="uploader" name="uploader">
+        <label for="filter">Filter by</label>
+        <select name="filter" id="filter">
+            <option value="pageRank">Page Rank</option>
+        </select>
+        <input type="submit" value="Submit" class="submit">
+    </form>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="../js/index.js"></script>
+</html>
